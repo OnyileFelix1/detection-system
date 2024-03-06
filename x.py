@@ -19,7 +19,7 @@ current_frame = cv2.cvtColor(current_frame, cv2.COLOR_BGR2GRAY)
 
 while True:
    
-    _, frame = cap.
+    _, frame = cap.read()
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     
