@@ -6,7 +6,7 @@ def is_motion_detected(frame, prev_frame, threshold=25):
     return cv2.countNonZero(threshold_frame) > 0
 
 cap = cv2.VideoCapture(0)  
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)  
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320  
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)  
 cap.set(cv2.CAP_PROP_FPS, 15)
 
