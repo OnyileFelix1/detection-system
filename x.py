@@ -10,7 +10,6 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)  
 cap.set(cv2.CAP_PROP_FPS, 15)
 
-
 _, prev_frame = cap.read()
 prev_frame = cv2.cvtColor(prev_frame, cv2.COLOR_BGR2GRAY)
 
@@ -22,7 +21,6 @@ while True:
     _, frame = cap.read()
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    
     if is_motion_detected(frame_gray, prev_frame):
         print("Motion detected!")
 
@@ -32,7 +30,6 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
 
 cap.release()
 cv2.destroyAllWindows()
