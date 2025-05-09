@@ -1,6 +1,6 @@
 import cv2
 
-def is_motion_detected(frame, prev_frame, threshold=25)
+def is_motion_detected(frame, prev_frame, threshold=25):
     diff_frame = cv2.absdiff(prev_frame, frame)
     _, threshold_frame = cv2.threshold(diff_frame, threshold, 255, cv2.THRESH_BINARY)
     return cv2.countNonZero(threshold_frame) > 0
