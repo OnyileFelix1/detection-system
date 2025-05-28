@@ -1,4 +1,4 @@
-import cv2
+import cv
 
 def is_motion_detected(frame, prev_frame, threshold=25):
     diff_frame = cv2.absdiff(prev_frame, frame)
