@@ -1,10 +1,11 @@
+# Import from Cv2 library..
 import cv2
-
+#check for motion..
 def is_motion_detected(frame, prev_frame, threshold=25):
     diff_frame = cv2.absdiff(prev_frame, frame)
     _, threshold_frame = cv2.threshold(diff_frame, threshold, 255, cv2.THRESH_BINARY)
     return cv2.countNonZero(threshold_frame) > 0
-
+#
 cap = cv2.VideoCapture(0)  
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)  
