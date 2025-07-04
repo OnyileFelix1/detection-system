@@ -12,7 +12,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
 cap.set(cv2.CAP_PROP_FPS, 15)
 
 _, prev_frame = cap.read()
-prev_frame = cv2.cvtColor(prev_frame, cv2.COLOR_BGR2GRAY
+prev_frame = cv2.cvtColor(prev_frame, cv2.COLOR_BGR2GRAY)
 
 _, current_frame = cap.read()
 current_frame = cv2.cvtColor(current_frame, cv2.COLOR_BGR2GRAY)
