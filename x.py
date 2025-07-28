@@ -19,7 +19,7 @@ current_frame = cv2.cvtColor(current_frame, cv2.COLOR_BGR2GRAY)
 
 while True:
    
-    _, frame = cap.read
+    _, frame = cap.read()
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     if is_motion_detected(frame_gray, prev_frame):
