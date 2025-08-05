@@ -6,7 +6,7 @@ def is_motion_detected(frame, prev_frame, threshold=25):
     _, threshold_frame = cv2.threshold(diff_frame, threshold, 255, cv2.THRESH_BINARY)
     return cv2.countNonZero(threshold_frame) > 0
 #capture and set frame
-cap = cv2.VideoCapture()  
+cap = cv2.VideoCapture(0)  
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)  
 cap.set(cv2.CAP_PROP_Fps, 15)
@@ -34,4 +34,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
 
