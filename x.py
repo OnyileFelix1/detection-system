@@ -9,7 +9,7 @@ def is_motion_detected(frame, prev_frame, threshold=25):
 cap = cv2.VideoCapture(0)  
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)  
-cap.set(cv2.CAP_PROP_Fps, 15)
+(cv2.CAP_PROP_Fps, 15)
 
 _, prev_frame = cap.read()
 prev_frame = cv2.cvtColor(prev_frame, cv2.COLOR_BGR2GRAY)
@@ -34,5 +34,6 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
 
 
